@@ -1,0 +1,8 @@
+cortexutils
+html2text
+chardet
+torch
+torchvision
+torchaudio
+numpy
+sentence_transformers
