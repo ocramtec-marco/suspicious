@@ -1,0 +1,12 @@
+{
+  "name": "AI_Mail_Analyzer",
+  "version": "1.4",
+  "author": "THA-CERT //ECR",
+  "url": "-",
+  "license": "-",
+  "description": "-",
+  "dataTypeList": ["file"],
+  "command": "AIMailAnalyzer/ai_mail_classifier.py",
+  "baseConfig": "-",
+  "configurationItems": []
+}
