@@ -19,7 +19,7 @@ Before starting, ensure you have the following installed on your system:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/thalesgroup-cert/Suspicious.git
+   git clone [https://github.com/thalesgroup-cert/Suspicious.git](https://github.com/thalesgroup-cert/suspicious)
    ```
 
 2. **Navigate to the project directory**
@@ -31,18 +31,41 @@ Before starting, ensure you have the following installed on your system:
 3. **Build the Docker containers**
 
    ```bash
-   docker-compose build
+   docker compose build
    ```
 
 4. **Start the containers**
 
    ```bash
-   docker-compose up
+   docker compose up
    ```
 
 The application will now be running at:
 👉 [http://localhost:9020](http://localhost:9020)
 
+## Post-Installation Steps
+
+Apply these steps inside the Suspicious container:
+
+### Start the Development Server
+
+```bash
+python manage.py runserver
+```
+
+Suspicious will be accessible at: [http://localhost:9020](http://localhost:9020)
+
+### Run Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+### **Admin Account:** Create an admin user for managing the app:
+    
+ ```bash
+ python manage.py createsuperuser
+ ```
 ---
 
 ## Usage
@@ -76,12 +99,12 @@ docker-compose down
 * Logs can be monitored with:
 
   ```bash
-  docker-compose logs -f
+  docker compose logs -f
   ```
 
 * To rebuild after changes:
 
   ```bash
-  docker-compose build --no-cache
-  docker-compose up
+  docker compose build --no-cache
+  docker compose up
   ```
