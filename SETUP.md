@@ -47,14 +47,6 @@ The application will now be running at:
 
 Apply these steps inside the Suspicious container:
 
-### Start the Development Server
-
-```bash
-python manage.py runserver
-```
-
-Suspicious will be accessible at: [http://localhost:9020](http://localhost:9020)
-
 ### Run Database Migrations
 
 ```bash
