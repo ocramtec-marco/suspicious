@@ -80,7 +80,7 @@ Once the environment is up and configured:
 To stop the containers, run:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ---
