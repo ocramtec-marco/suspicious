@@ -19,7 +19,7 @@ Before starting, ensure you have the following installed on your system:
 1. **Clone the repository**
 
    ```bash
-   git clone [https://github.com/thalesgroup-cert/Suspicious.git](https://github.com/thalesgroup-cert/suspicious)
+   git clone https://github.com/thalesgroup-cert/Suspicious.git
    ```
 
 2. **Navigate to the project directory**
