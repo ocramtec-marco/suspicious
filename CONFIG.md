@@ -5,7 +5,61 @@ This document describes each configuration file and its main parameters.
 
 ---
 
-## 1. Global Environment File (`.env`)
+## Important 
+
+Make sure to create folder for the apps
+
+```bash
+cd suspicious
+mkdir -p {elasticsearch,cortex}
+```
+
+The database on launch should creates its own folder if not you can repeat the previous step but with a `db` folder.
+
+### Important files to have
+
+#### Elastic logs
+
+Elasticsearch should have a folder named `logs` and a file in it called `gc.log` without it the container will not launch.
+
+```bash
+cd suspicious
+mkdir -p elasticsearch/logs
+touch elasticsearch/logs/gc.log
+```
+
+#### Cortex configuration file
+
+For this part you can refer to the official StrangeBee's Cortex part but for the Suspicious app here is a quick recap of what to instanciate:
+
+```bash
+cd suspicious
+touch cortex/application.conf
+```
+
+Follow StrangeBee's instructions on how to customize your instance.
+Once created you will have to create an admin account.
+With this admin you have to create the organisation and a user in it, they will help suspicious launch the jobs. 
+You can create directly the API key for the user and coopy it to your `Suspicious/settings.json` in the Cortex part. You can have a glimpse of it in the `Suspicious/settings.json` part.
+
+#### Cortex docker file
+
+You can have cortex pulling private analyzers you have made using the `cortex/docker/config.json` file it will use automatically the Git or Docker Token you put in it.
+Be careful to use a token with the access you need and not all access on your private repo.
+
+```json
+{
+    "auths": {
+        "ghcr.io": {
+            "auth": ""
+        }
+    }
+}
+```
+
+## Global Environment File (`.env`)
+
+A `.env.example` file is in the repo simply copy it to a `.env` that you customize with your needs 
 
 This file contains environment variables used to configure Docker services.
 
@@ -44,6 +98,8 @@ CORTEX_PORT=10001
 
 ### Proxy (optional)
 
+As the proxy is optionnal you can let it empty or comment the lines in the `.env`
+
 ```env
 HTTP_PROXY=http://proxy.com:8080
 HTTPS_PROXY=http://proxy.com:8080
@@ -51,7 +107,7 @@ HTTPS_PROXY=http://proxy.com:8080
 
 ---
 
-## 2. Suspicious Settings (`Suspicious/settings.json`)
+## Suspicious Settings (`Suspicious/settings.json`)
 
 This JSON configures the main **Suspicious** application.
 
@@ -96,7 +152,7 @@ Defines SMTP server and branding for notification emails (footers, logos, links 
 
 ---
 
-## 3. Email Feeder (`email-feeder/config.json`)
+## Email Feeder (`email-feeder/config.json`)
 
 This service connects to email inboxes and ingests suspicious messages.
 
