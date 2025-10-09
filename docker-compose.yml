@@ -56,6 +56,7 @@ services:
     restart: always
     volumes:
       - "${SUSPICIOUS_PATH}/logs:/var/log"
+      - "${SUSPICIOUS_PATH}/Suspicious/settings.json:/app/settings.json"
     command: >
       /bin/bash -c "
       python3 manage.py crontab show &&
@@ -63,7 +64,7 @@ services:
       python3 manage.py crontab show &&
       python3 manage.py runserver 0.0.0.0:9020 --insecure"
     env_file:
-      - ".env"
+      - "${SUSPICIOUS_PATH}/.env"
     tty: true
     environment:
       no_proxy: "${NO_PROXY}"
