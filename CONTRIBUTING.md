@@ -11,8 +11,7 @@ Before contributing, ensure you have:
 
 * [Git](https://git-scm.com/) installed
 * A GitHub account
-* A fork of the [official Suspicious repository](https://github.com/...)
-
+* A fork of the [official Suspicious repository](https://github.com/thalesgroup-cert/suspicious)
 Clone your fork locally:
 
 ```bash
