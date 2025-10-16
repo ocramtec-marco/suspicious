@@ -1,18 +1,15 @@
-name: Docker Image Latest
+name: Docker Image Tag
 
-on: 
+on:
   push:
-    paths:
-    - 'Suspicious/**'
-    branches: [ master ]
-  workflow_dispatch:
+    tags:
+      - 'latest'  # Match semantic versioning tags like v1.0.0
 
 permissions:
   contents: write
   packages: write
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
@@ -30,14 +27,14 @@ jobs:
     - name: Determine Docker tag
       id: docker_tag
       run: |
-        TAG_DATE=$(date +'%y%m%d%H%M')
-        echo "::set-output name=tag::snapshot-${TAG_DATE}"
-
+        TAG=$(echo ${{ github.ref }} | sed 's/refs\/tags\///')
+        echo "::set-output name=tag::${TAG}"
 
     - name: Build and push
       id: docker_build
       uses: docker/build-push-action@v5
       with:
-        context:  "{{defaultContext}}:Suspicious"
+        context: "{{defaultContext}}:Suspicious"
         push: true
-        tags: ghcr.io/thalesgroup-cert/suspicious:latest
+        tags: ghcr.io/thalesgroup-cert/suspicious:${{ steps.docker_tag.outputs.tag }}
+
